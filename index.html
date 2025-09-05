@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anti-Deception Quiz</title>
+  <style>
+    body {
+      font-family: "Segoe UI Variable", Arial, Verdana, sans-serif, "Microsoft YaHei";
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .header {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .align-left {
+      text-align: left;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .theme-blue {
+      color: #2f5496;
+    }
+
+    .theme-blue-2 {
+      color: #004080;
+    }
+
+    .subheader {
+      font-size: 24px;
+    }
+
+    .banner {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .quiz-button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+
+    .quiz-button:hover {
+      background-color: #1a49ab;
+    }
+
+    .quiz-content {
+      text-align: left;
+      padding: 10px;
+      transition: background-color 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    .quiz-content.highlight {
+      background-color: #f0f8ff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .expandable-title {
+      font-size: 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+    }
+
+    .expandable-content {
+      max-height: 0;
+      overflow: hidden;
+      text-align: left;
+      margin: 20px 10px 10px 10px;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .expandable-content.active {
+      max-height: 1068px;
+    }
+
+    #expandable-toggle {
+      font-size: 30px;
+    }
+
+    .poster-wrapper {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .poster {
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Banner -->
+    <div class="header theme-blue">
+      Anti-Deception / Be Smart, Be Safe, Be Alert of Potential Scam<br>
+      防詐騙/三思而行：警惕潛在騙局
+    </div>
+    <img src="./banner.png" alt="Anti-Deception Banner" class="banner">
+
+    <!-- Quiz Button -->
+    <!-- <button class="quiz-button" onclick="scrollToQuiz()">Anti-Deception Quiz</button> -->
+
+    <!-- What's News Content -->
+    <div class="header theme-blue align-left">What's News</div>
+    <div class="subheader align-left">校園反詐檸盟 聯手出擊</div>
+    <div class="subheader align-left bold">See details:</div>
+    <div class="align-left">
+      <a href="https://www.adcc.gov.hk/zh-hk/university-anti-scam-series.html"
+        target="_blank">https://www.adcc.gov.hk/zh-hk/university-anti-scam-series.html</a>
+    </div>
+    <br />
+
+    <img src="./lemon-tea.png" alt="lemon-tea" class="banner">
+
+    <!-- Quiz Content -->
+    <div id="quiz-content" class="quiz-content">
+      <div class="header theme-blue">Anti-Deception Quiz</div>
+      <p>To enhance awareness of common scams and tactics employed by fraudsters, and to equip you with the knowledge
+        needed to protect yourself, students are required to complete the quiz with 100% accuracy.</p>
+      <p>Students can log in to Canvas, and then choose “Courses” > “Anti-Deception Quiz” to complete the quiz.</p>
+      <p>For more information about the most recent fraud trends and strategies, please visit the website of the <a
+          href="https://www.adcc.gov.hk/en-hk/" target="_blank">Anti-Deception Coordination Centre (ADCC)</a> under the
+        Hong Kong Police Force.</p>
+      <p>Should you encounter any issues with the Anti-Deception Quiz, please contact <a
+          href="mailto:sdssat@cityu.edu.hk">sdssat@cityu.edu.hk</a>.</p>
+    </div>
+    <br />
+    <br />
+
+    <!-- Alert Content -->
+    <div class="expandable-title header theme-blue" onclick="toggleExpandable('alert')">
+      Anti-Deception<span id="alert-toggle" class="theme-blue">+</span>
+    </div>
+    <div id="alert" class="expandable-content">
+      <p>In recent years, Hong Kong has witnessed a rise in cases of telephone and internet scams, with non-local
+        students often targeted. These scams take various forms, including investment fraud, online romance scams, and
+        telephone deception. It is essential to remain cautious, particularly when receiving calls from individuals
+        claiming to represent well-known courier companies or government departments such as the Immigration or Health
+        Departments.</p>
+      <p>Scammers frequently impersonate government officials, couriers, or potential employers, attempting to obtain
+        personal information or request financial transactions. You must never share your personal details or transfer
+        money to anyone suspicious. If you are uncertain about the authenticity of a call or message, please seek
+        assistance by contacting the Anti-Deception Coordination Centre of the Hong Kong Police Force at (852) 18222.
+      </p>
+      <p>As students, your safety and protection against fraud are paramount. Always prioritise caution and stay
+        informed to guard yourself against deception. If you believe you have been a victim of a scam or fraud, report
+        it immediately to the appropriate authorities. By working together and maintaining vigilance, we can help keep
+        our community safe from these criminal activities.</p>
+    </div>
+
+    <!-- Latest Scam Alerts Content -->
+    <div class="align-left">
+      <div class="expandable-title header theme-blue" onclick="toggleExpandable('latest-scam-alerts')">Latest Scam
+        Alerts<span id="latest-scam-alerts-toggle" class="theme-blue">+</span></div>
+      <div id="latest-scam-alerts" class="expandable-content">
+        <div>Defrauding tricks come in different forms. To enhance your awareness of deception prevention, please click
+          <a href="https://www.adcc.gov.hk/en-hk/alerts.html" target="_blank">here</a> to browse the latest scam alerts.
+        </div>
+      </div>
+    </div>
+
+    <!-- Posters Content -->
+    <div class="expandable-title header theme-blue" onclick="toggleExpandable('posters')">
+      Posters<span id="posters-toggle" class="theme-blue">+</span>
+    </div>
+    <div id="posters" class="expandable-content">
+      <div class="poster-wrapper">
+        <img src="./poster1.png" alt="poster-1" class="poster">
+        <img src="./poster2.jpg" alt="poster-2" class="poster">
+      </div>
+    </div>
+
+    <!-- Video on Anti-Deception Content-->
+    <div class="align-left">
+      <div class="expandable-title header theme-blue" onclick="toggleExpandable('video')">
+        Video on Anti-Deception<span id="video-toggle" class="theme-blue">+</span>
+      </div>
+      <div id="video" class="expandable-content theme-blue-2">
+        各位同学,
+        <br />
+        <br />
+        最近收到警方通报关于多宗电话行骗案件，其中有学生收到假冒各政府部门官员的骗徒来电，要求受害人提供银行户口号码及密码作调查之用。其后受害人发现其户口内之存款全被盗取。更有甚者，受害人骗徒被长时间要挟。
+        <br />
+        <br />
+        请观看警方专门为内地来港同学制作的防诈骗视频。
+        <br />
+        <br />
+        <a href="https://www.adcc.gov.hk/zh-hk/videos.html"
+          target="_blank">https://www.adcc.gov.hk/zh-hk/videos.html</a>
+
+      </div>
+    </div>
+
+    <!-- Anti-Deception Coordination Centre Content-->
+    <div class="align-left">
+      <div class="expandable-title header theme-blue" onclick="toggleExpandable('adcc')">
+        Anti-Deception Coordination Centre<span id="adcc-toggle" class="theme-blue">+</span>
+      </div>
+      <div id="adcc" class="expandable-content">
+        To step up combat actions against deception and increase public awareness of various kinds of scams, the Hong
+        Kong Police Force set up the Anti-Deception Coordination Centre (ADCC) under the Commercial Crime Bureau with a
+        view to consolidating all the relevant efforts of the Force in fighting and preventing the crime.
+        <br />
+        <br />
+        The ADCC operates an all-day enquiry hotline, “Anti-Scam Helpline 18222”, to provide immediate consultation for
+        the general public and enhance support to frontline units of the Force in order to handle suspicious deception
+        cases in a more effective manner. The general public may browse the website of ADCC for the latest modus
+        operandi of deception and scam alerts.
+        <br />
+        <br />
+        <br />
+        <div>
+          <img src="./adcc-logo.png" alt="adcc" class="adcc-logo">
+        </div>
+        <br />
+        <br />
+        (一站式防騙資訊連結)
+        <br />
+        <a href="https://humane-sofa-03a.notion.site/ff09eb75a63049789284228fcfb5b1c8"
+          target="_blank">https://humane-sofa-03a.notion.site/ff09eb75a63049789284228fcfb5b1c8</a>
+        <br />
+        <br />
+        <br />
+        (一站式防騙資訊二維碼)
+        <br />
+        <img src="./adcc-qr-code.gif" alt="adcc">
+      </div>
+    </div>
+  </div>
+  <script>
+    // function scrollToQuiz() {
+    //   const quizContent = document.getElementById('quiz-content');
+    //   quizContent.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', duration: 10000 });
+    //   quizContent.classList.add('highlight');
+    //   setTimeout(() => {
+    //     quizContent.classList.remove('highlight');
+    //   }, 2000);
+    // }
+    function toggleExpandable(id) {
+      const content = document.getElementById(id);
+      const toggle = document.getElementById(`${id}-toggle`);
+      if (content.classList.contains('active')) {
+        content.classList.remove('active');
+        toggle.textContent = '+';
+      } else {
+        content.classList.add('active');
+        toggle.textContent = '−';
+      }
+    }
+  </script>
+</body>
+
+</html>
